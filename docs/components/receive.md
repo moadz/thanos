@@ -137,6 +137,15 @@ Flags:
       --receive.local-endpoint=RECEIVE.LOCAL-ENDPOINT
                                  Endpoint of local receive node. Used to
                                  identify the local node in the hashring
+                                 configuration. If it's empty AND hashring
+                                 configuration was provided, it means that
+                                 receive will run in RoutingOnly mode.
+      --receive.relabel-config=<content>
+                                 Alternative to 'receive.relabel-config-file'
+                                 flag (mutually exclusive). Content of YAML file
+                                 that contains relabeling configuration.
+      --receive.relabel-config-file=<file-path>
+                                 Path to YAML file that contains relabeling
                                  configuration.
       --receive.replica-header="THANOS-REPLICA"
                                  HTTP header specifying the replica number of a
